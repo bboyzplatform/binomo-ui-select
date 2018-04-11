@@ -9,5 +9,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(UiSelectModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+  .bootstrapModule(UiSelectModule, {ngZone: 'noop'}).catch(err => console.log(err));
