@@ -1,0 +1,18 @@
+<div style="text-align:center">
+  <h5>
+    <img src="../assets/svg/binomo.svg" alt="Binomo logo">
+    {{ title }}!
+  </h5>
+  <select (change)="onSelect($event)">
+    <option *ngFor="let optValue of  optValues" value= {{optValue.text}}>
+      {{optValue.text}}
+    </option>
+  </select>
+  
+  <!-- info panel -->
+  <div class="card-body">
+  <h6>Console Info:</h6>
+  Current Id: {{selectedOption.id}}
+  Current text: {{selectedOption.text}}
+</div>
+</div>
